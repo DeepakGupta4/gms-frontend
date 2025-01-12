@@ -1,0 +1,12 @@
+.customSinup::-webkit-scrollbar{
+    width: 4px;  /*width of the scrollarbar*/
+}
+
+.customSinup::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /*color of the scrollbar thumb*/
+    border-radius: 8px;
+}
+
+.customSinup::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); /*color of the scrollbar track*/
+}
