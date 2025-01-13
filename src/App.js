@@ -6,6 +6,8 @@ import DashBoard from './pages/Home/dashBoard/DashBoard';
 import Home from './pages/Home/Home';
 import {Routes,Route, useNavigate} from 'react-router-dom'
 import Member from './pages/member/Member';
+import GeneralUser from './pages/generalUser/GeneralUser';
+import MemberDetail from './pages/MemberDetail/MemberDetail';
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
       // navigate('/dashboard')
 
     }else{
+      setIsLogin(false)
       navigate('/')
     }
   },[sessionStorage.getItem("isLogin")])
@@ -34,6 +37,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/dashboard' element={<DashBoard />} />
         <Route path='/member' element={<Member />} />
+        <Route path='/specific/:page' element={<GeneralUser />} />
+        <Route path='/member/:id' element={<MemberDetail />} />
       </Routes>
     </div>
   );
